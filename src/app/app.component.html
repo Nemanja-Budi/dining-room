@@ -1,11 +1,13 @@
-<div>
+<div class="grid grid-rows-[0.1fr,1fr] h-[100dvh]">
   <div>
-    header
+    <app-header></app-header>
   </div>
-  <div>
-    sidebar
-  </div>
-  <div>
-    <router-outlet></router-outlet>
+  <div class="h-full grid grid-cols-[0.15fr,1fr]">
+    <div class="bg-white/10">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="bg-neutral-600">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

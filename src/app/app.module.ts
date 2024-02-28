@@ -8,6 +8,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RestoranListComponent } from './components/core/restoran-list/restoran-list.component';
 import { HomeComponent } from './components/core/home/home.component';
 import { AboutComponent } from './components/core/about/about.component';
+import { PaganationComponent } from './components/core/restoran-list/paganation/paganation.component';
+import { PriceRangeComponent } from './components/core/restoran-list/price-range/price-range.component';
+import { RestoranItemComponent } from './components/core/restoran-list/restoran-item/restoran-item.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { AboutComponent } from './components/core/about/about.component';
     SidebarComponent,
     RestoranListComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    PaganationComponent,
+    PriceRangeComponent,
+    RestoranItemComponent
   ],
   imports: [
     BrowserModule,
