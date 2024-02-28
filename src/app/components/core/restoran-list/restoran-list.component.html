@@ -3,7 +3,7 @@
         <app-paganation></app-paganation>
         <app-price-range></app-price-range>
     </div>
-    <div class="p-4">
-        <app-restoran-item></app-restoran-item>
+    <div class=" grid grid-cols-3">
+        <app-restoran-item class="p-4" *ngFor="let restoran of restorani.results; index as i" [restoran]="restoran" [class.bg-slate-100]="i < 3"></app-restoran-item>
     </div>
 </div>
