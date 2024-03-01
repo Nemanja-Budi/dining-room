@@ -13,6 +13,7 @@ import { AboutComponent } from './components/core/about/about.component';
 import { PaganationComponent } from './components/core/restoran-list/paganation/paganation.component';
 import { PriceRangeComponent } from './components/core/restoran-list/price-range/price-range.component';
 import { RestoranItemComponent } from './components/core/restoran-list/restoran-item/restoran-item.component';
+import { ModalModule } from './components/core/restoran-list/modal/modal.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RestoranItemComponent } from './components/core/restoran-list/restoran-
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ModalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

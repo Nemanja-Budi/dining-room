@@ -1,4 +1,4 @@
-<h3 class="text-blue-500 font-bold">{{restoran.name}}</h3>
+<h3 (click)="onGetRestoran(restoran._id,modalTemplate)" class="text-blue-500 font-bold">{{restoran.name}}</h3>
 <p>{{restoran.description}}</p>
 <figure class=" grid grid-cols-[auto,1fr] items-center gap-2">
     <figcaption>Rating: </figcaption>
@@ -11,6 +11,14 @@
     <div class="flex gap-1">
         <img *ngFor="let res of ratings" class="flex" src="../../../../../assets/images/coin-full.png" alt="coin">
     </div>
-    
 </figure>
+
+<ng-template #modalTemplate>
+    
+    <div *ngFor="let item of items">
+        {{item?.name}}
+    </div>
+    
+</ng-template>
+
 

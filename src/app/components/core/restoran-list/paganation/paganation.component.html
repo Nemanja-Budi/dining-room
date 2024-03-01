@@ -1,1 +1,16 @@
-<p>paganation works!</p>
+<div class="flex gap-2">
+    <button 
+        [disabled]="inputPage < 2" 
+        (click)="onSetPage(inputPage-1)" 
+        class="bg-blue-600 px-5 py-2"
+        [ngClass]="inputPage < 2 ? 'bg-blue-300' : 'bg-blue-600'">
+        Prev
+    </button>
+    <button
+        [disabled]="inputPage > restoraniCount / itemsPerPage" 
+        (click)="onSetPage(inputPage+1)" 
+        class="bg-blue-600 px-5 py-2"
+        [ngClass]="inputPage > restoraniCount / itemsPerPage ? 'bg-blue-300' : 'bg-blue-600'">
+        Next
+    </button>
+</div>

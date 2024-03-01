@@ -8,6 +8,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent},
   { path: 'restaurants', component: RestoranListComponent},
+  { path: "restaurants/:id", component: RestoranListComponent },
+  { path: "restaurants/:cuisine", component: RestoranListComponent },
   { path: '', redirectTo: '/home', pathMatch: 'prefix'}
 ];
 

@@ -1,9 +1,21 @@
 <div class="grid grid-rows-[auto,1fr] h-full">
     <div class="flex justify-between p-2">
-        <app-paganation></app-paganation>
-        <app-price-range></app-price-range>
+        <app-paganation 
+            [inputPage]="queryParams.page"
+            (pageChange)="onChangePage($event)"
+            [restoraniCount]="restoraniCount"
+            [itemsPerPage]="queryParams.pageSize"></app-paganation>
+        <app-price-range
+            (priceChange)="onChangePrice($event)"></app-price-range>
     </div>
     <div class=" grid grid-cols-3">
-        <app-restoran-item class="p-4" *ngFor="let restoran of restorani.results; index as i" [restoran]="restoran" [class.bg-slate-100]="i < 3"></app-restoran-item>
+        <app-restoran-item 
+            class="p-4" 
+            *ngFor="let restoran of restorani.results; index as i" 
+            [restoran]="restoran" 
+            [class.bg-slate-100]="i < 3">
+        </app-restoran-item>
     </div>
 </div>
+
+
